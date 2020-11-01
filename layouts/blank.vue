@@ -1,16 +1,5 @@
 <template>
   <div>
-    <NuxtLink to="/list">
-      List 
-    </NuxtLink>
-    <br/>
-     <NuxtLink to="/detail">
-      Detail
-    </NuxtLink>
-     <br/>
-     <NuxtLink to="/">
-      Index 
-    </NuxtLink>
     <nuxt />
   </div>
 </template>
