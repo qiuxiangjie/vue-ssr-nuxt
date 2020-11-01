@@ -8,10 +8,9 @@ const router = require('koa-router')({ prefix: '/api' })
 app.keys = ['some secret', 'another secret'];
 
 const goods = [
-    { id: 1, text: '我是商品1', price: 1000 },
-    { id: 2, text: '我是商品2', prece: 2000 }
-
-]
+  { id: 1, text: "我是商品1", price: 1000 },
+  { id: 2, text: "我是商品2", price: 2000 },
+];
 
 
 router.get('/goods', ctx => {
