@@ -15,6 +15,7 @@ const goods = [
 
 
 router.get('/goods', ctx => {
+    console.log(ctx)
     ctx.body = {
         code: 200,
         data:goods

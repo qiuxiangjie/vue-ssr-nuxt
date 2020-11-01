@@ -1,4 +1,3 @@
-
 module.exports = {
   mode: "universal",
   /*
@@ -12,10 +11,10 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
-      }
+        content: process.env.npm_package_description || "",
+      },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Customize the progress-bar color
@@ -34,7 +33,7 @@ module.exports = {
    */
   devModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    "@nuxtjs/eslint-module"
+    "@nuxtjs/eslint-module",
   ],
   /*
    ** Nuxt.js modules
@@ -42,13 +41,19 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true,
+  },
+  proxy: {
+    "/api": "http://localhost:8888",
+  },
+
   /*
    ** Build configuration
    */
@@ -56,9 +61,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
   },
-  telemetry: true
+  telemetry: true,
 };
-
-
