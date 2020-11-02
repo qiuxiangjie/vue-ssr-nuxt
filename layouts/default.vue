@@ -1,8 +1,9 @@
 <template>
   <div>
-    <NuxtLink to="/list"> List </NuxtLink>
-    <br />
+   
     <NuxtLink to="/"> Index </NuxtLink>
+     <NuxtLink to="/list"> List </NuxtLink>
+      <NuxtLink to="/admin"> Admin </NuxtLink>
     <nuxt />
   </div>
 </template>
