@@ -54,6 +54,10 @@ module.exports = {
     "/api": "http://localhost:8888",
   },
 
+  router: {
+    // middleware: ["auth"], // 全局路由中间件
+  },
+
   /*
    ** Build configuration
    */
