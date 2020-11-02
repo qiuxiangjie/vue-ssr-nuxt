@@ -4,6 +4,7 @@
 <script>
 export default {
   name: "",
+  layout: 'blank'
 };
 </script>
 <style></style>
