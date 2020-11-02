@@ -12,6 +12,11 @@
 <script>
 export default {
   name: "List",
+  head: {
+    title: '商品列表',
+    meta: [],
+    link: []
+  },
   data() {
     return {
       goods: [],
