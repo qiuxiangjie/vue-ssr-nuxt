@@ -2,10 +2,11 @@
   <div>
     <div class="til">List</div>
     <div v-for="item in goods" :key="item.id">
-      <NuxtLink :to="'/detail/' + item.id">{{
+      <NuxtLink :to="'/list/' + item.id">{{
         item.text
       }}</NuxtLink>
     </div>
+    <nuxt-child></nuxt-child>
   </div>
 </template>
 <script>
