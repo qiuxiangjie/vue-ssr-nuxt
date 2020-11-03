@@ -27,7 +27,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["@/plugins/antd-ui", '@/plugins/api-inject'],
+  plugins: ["@/plugins/antd-ui", "@/plugins/api-inject"],
   /*
    ** Nuxt.js dev-modules
    */
@@ -42,6 +42,7 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
+    "cookie-universal-nuxt",  // 解决服务器获取cookie问题
   ],
   /*
    ** Axios module configuration
