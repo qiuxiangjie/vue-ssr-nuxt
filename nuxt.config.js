@@ -1,3 +1,14 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @author: zhoujianxiang
+ * @Date: 2020-11-16 08:45:45
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2020-11-16 16:29:08
+ */
+
+const env = require('./env');
+
 module.exports = {
   mode: "universal",
   /*
@@ -52,7 +63,12 @@ module.exports = {
     proxy: true,
   },
   proxy: {
-    "/api": "http://localhost:8888",
+    '/api/': {
+      target: env[process.env.MODE].ENV_API,
+        pathRewrite: {
+       //   '^/api/': ''
+        }
+    }
   },
 
   router: {

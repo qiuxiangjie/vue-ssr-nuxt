@@ -1,3 +1,12 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @author: zhoujianxiang
+ * @Date: 2020-11-16 08:45:45
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2020-11-16 16:29:42
+ */
+
 module.exports = {
   root: true,
   env: {
@@ -12,11 +21,11 @@ module.exports = {
   rules: {
     "nuxt/no-cjs-in-config": "off",
     // 'no-console': 0,
-    //'prettier/prettier': 'off',
+    'prettier/prettier': 'off',
     "eslint.autoFixOnSave": true,
     "prefer-const": false,
     "prettier/prettier": [
-      "warn",
+      "none",
       {
         tabWidth: 2,
         useTabs: false,
