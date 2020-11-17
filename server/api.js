@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-17 09:46:39
+ * @LastEditTime: 2020-11-17 15:29:28
  */
 
 const Koa = require('koa')
@@ -44,7 +44,9 @@ router.post('/login', ctx => {
         ctx.cookies.set('token', token);
         ctx.body = {
             code: 200,
-            token
+            data: {
+             token  
+            }
         
         }
     } else {

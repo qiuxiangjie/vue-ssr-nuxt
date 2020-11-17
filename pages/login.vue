@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @author: zhoujianxiang
+ * @Date: 2020-11-16 08:45:45
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2020-11-17 15:32:12
+-->
 <template>
   <a-form
     id="components-form-demo-normal-login"
@@ -67,10 +75,8 @@ export default {
         if (!err) {
           console.log("Received values of form: ", values);
           this.$store.dispatch("user/login", values).then((res) => {
-            if (res.code === 200) {
-              const redirect = this.$route.query.redirect || "/";
-              this.$router.push(redirect);
-            }
+           const redirect = this.$route.query.redirect || "/";
+           this.$router.push(redirect);
           });
         }
       });
