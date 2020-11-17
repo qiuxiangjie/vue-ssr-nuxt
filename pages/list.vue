@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @author: zhoujianxiang
+ * @Date: 2020-11-16 08:45:45
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2020-11-17 11:06:05
+-->
 <template>
   <div>
     <div class="til">List</div>
@@ -28,7 +36,7 @@ export default {
     // 3、 仅仅存在页面组件
     const res = await $axios.$get("/api/goods");
     let { code, data } = res;
-    console.log("code", res);
+   
     if (code === 200) {
       // 返回的数据直接和data里面的数据合并
       return { goods: data };

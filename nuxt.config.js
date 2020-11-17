@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-16 16:29:08
+ * @LastEditTime: 2020-11-17 10:30:00
  */
 
 const env = require('./env');
@@ -61,13 +61,21 @@ module.exports = {
    */
   axios: {
     proxy: true,
+    // credentials: true, //跨域请求需使用凭证
   },
   proxy: {
     '/api/': {
+      changeOrigin: true,
       target: env[process.env.MODE].ENV_API,
-        pathRewrite: {
+      pathRewrite: {
        //   '^/api/': ''
-        }
+      },
+      headers: {
+        host: env[process.env.MODE].ENV_API,
+        referer: 'http://www.a.com',
+        origin: 'http://www.b.com',
+        changeOrigin:  'http://www.c.com',
+      }
     }
   },
 
