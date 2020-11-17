@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-17 10:30:00
+ * @LastEditTime: 2020-11-17 11:47:08
  */
 
 const env = require('./env');
@@ -38,7 +38,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["@/plugins/antd-ui", "@/plugins/api-inject"],
+  plugins: ["@/plugins/antd-ui", "@/plugins/api-inject", "@/plugins/interceptor"],
   /*
    ** Nuxt.js dev-modules
    */
