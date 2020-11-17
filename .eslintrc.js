@@ -1,48 +1,35 @@
-/*
- * @Descripttion: 
- * @version: 
- * @author: zhoujianxiang
- * @Date: 2020-11-16 08:45:45
- * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-16 16:29:42
- */
-
 module.exports = {
   root: true,
   env: {
-    browser: true,
-    node: true,
+    node: true
   },
+  extends: [
+    'plugin:vue/essential',
+    '@vue/standard'
+  ],
   parserOptions: {
-    parser: "babel-eslint",
+    parser: 'babel-eslint'
   },
-  extends: ["@nuxtjs", "plugin:nuxt/recommended", "@vue/prettier"],
-  // add your custom rules here
   rules: {
-    "nuxt/no-cjs-in-config": "off",
-    // 'no-console': 0,
-    'prettier/prettier': 'off',
-    "eslint.autoFixOnSave": true,
-    "prefer-const": false,
-    "prettier/prettier": [
-      "none",
-      {
-        tabWidth: 2,
-        useTabs: false,
-        semi: true,
-        singleQuote: false,
-        trailingComma: "none",
-        bracketSpacing: true,
-        jsxBracketSameLine: false,
-        arrowParens: "avoid",
-        proseWrap: "never",
-        printWidth: 120,
-        overrides: [],
-      },
-    ],
-    // "generator-star-spacing": "off",
-    // "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    // "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    // "no-unused-vars": "off"
-  },
-};
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    "space-before-function-paren": [0, "always"],
+    "camelcase": [0, {"properties": "never"}],
+    "no-useless-escape": 0,
+    "no-duplicate-case": 0,
+    "prefer-const": 0,
+    "no-undef": 0,
+    "no-unused-vars": 1,
+    "import/no-duplicates": 0,
+    "no-multiple-empty-lines": 0,
+    "semi":0,
+    "quotes": 0,
+    "prefer-promise-reject-errors": 0,
+    "no-async-promise-executor": 0,
+    'dot-notation': 0,
+    'arrow-parens': 0,
+    'generator-star-spacing': 0,
+    "no-callback-literal": 0,
+    "handle-callback-err": 0
+  }
+}
