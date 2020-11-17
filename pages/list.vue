@@ -1,11 +1,11 @@
-<!--
+
  * @Descripttion: 
  * @version: 
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-17 14:31:14
--->
+ * @LastEditTime: 2020-11-17 17:30:58
+
 <template>
   <div>
     <div class="til">List</div>
@@ -13,6 +13,7 @@
       <NuxtLink :to="'/list/' + item.id">{{
         item.text
       }}</NuxtLink>
+      <a-button @click="addGoods(item)">加入购物车</a-button>
     </div>
     <nuxt-child></nuxt-child>
   </div>
@@ -30,6 +31,9 @@ export default {
       goods: [],
     };
   },
+  created(){
+    console.log(process.broswer)
+  },
   async asyncData({ $axios, error }) {
     // 1、运行时间是在组件创建实例之前，this不能用
     // 2、nuxt传递上下文进来
@@ -38,6 +42,11 @@ export default {
     // 返回的数据直接和data里面的数据合并
       return { goods: data };
   },
+  methods: {
+    addGoods(good){
+      this.$store.commit('user/setShoppingCars', good)
+    }
+  }
 };
 </script>
 <style></style>

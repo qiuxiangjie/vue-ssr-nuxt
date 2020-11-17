@@ -1,12 +1,39 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @author: zhoujianxiang
+ * @Date: 2020-11-16 08:45:45
+ * @LastEditors: zhoujianxiang
+ * @LastEditTime: 2020-11-17 18:18:24
+-->
 <template>
   <div>
-   
     <NuxtLink to="/"> Index </NuxtLink>
      <NuxtLink to="/list"> List </NuxtLink>
       <NuxtLink to="/admin"> Admin </NuxtLink>
+      <a-badge :count="shoppingCars.length" style="position: fixed; top: 20px; right: 20px;">
+      <a href="#" class="head-example" />
+    </a-badge>
     <nuxt />
   </div>
 </template>
+
+<script>
+  import { mapState } from 'vuex'
+  export default {
+    name: 'default',
+    data() {
+      return {
+
+      }
+    },
+    computed: {
+      ...mapState({shoppingCars: state => state.user.shoppingCars})
+    }
+  }
+
+  
+</script>
 
 <style>
 html {
