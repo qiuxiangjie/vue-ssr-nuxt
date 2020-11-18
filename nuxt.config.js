@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-17 11:47:08
+ * @LastEditTime: 2020-11-18 09:40:51
  */
 
 const env = require('./env');
@@ -34,7 +34,10 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["ant-design-vue/dist/antd.css"],
+  css: [
+    "ant-design-vue/dist/antd.css",
+    "~assets/styles/index.css"
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -93,4 +96,10 @@ module.exports = {
     extend(config, ctx) {},
   },
   telemetry: true,
+  
+  /* 修改默认端口 */
+  // server:{
+  //   host:"127.0.0.1",
+  //   port:3001
+  // }
 };

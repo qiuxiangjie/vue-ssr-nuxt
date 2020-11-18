@@ -4,16 +4,19 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-17 18:18:24
+ * @LastEditTime: 2020-11-18 10:46:51
 -->
 <template>
   <div>
     <NuxtLink to="/"> Index </NuxtLink>
      <NuxtLink to="/list"> List </NuxtLink>
       <NuxtLink to="/admin"> Admin </NuxtLink>
-      <a-badge :count="shoppingCars.length" style="position: fixed; top: 20px; right: 20px;">
+      <a-badge :count="shoppingCart.length" style="position: fixed; top: 20px; right: 20px;">
+        <img src="~/assets/icons/cart.jpg" alt="">
+        
       <a href="#" class="head-example" />
     </a-badge>
+    <div class="cart" ></div>
     <nuxt />
   </div>
 </template>
@@ -28,7 +31,7 @@
       }
     },
     computed: {
-      ...mapState({shoppingCars: state => state.user.shoppingCars})
+      ...mapState({shoppingCart: state => state.user.shoppingCart})
     }
   }
 
@@ -36,6 +39,11 @@
 </script>
 
 <style>
+  .cart {
+    background: url('~assets/icons/cart.jpg') ;
+     width: 100px;
+     height: 100px;
+  }
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;

@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     addGoods(good){
-      this.$store.commit('user/setShoppingCars', good)
+      this.$store.commit('user/setShoppingCart', good)
     }
   }
 };

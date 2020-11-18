@@ -15,7 +15,7 @@ export default {
       nuxtServerInit({ commit }, { app, req }) {
           // 解决刷新，服务器渲染token找不到问题
       const token = app.$cookies.get("token"); 
-      const shoppingCars = app.$cookies.get("shoppingCars"); 
+      const shoppingCart = app.$cookies.get("shoppingCart"); 
 
       // let cookie = req.headers.cookie; 
       // let token = cookieparse(cookie).token;
@@ -24,8 +24,8 @@ export default {
       if (token) {
         commit("user/setToken", token);
       }
-      if (shoppingCars) {
-       // commit("user/setShoppingCars", shoppingCars);
+      if (shoppingCart) {
+       // commit("user/setShoppingCart", shoppingCart);
       }
     },
   },

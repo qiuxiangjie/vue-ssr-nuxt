@@ -4,21 +4,21 @@ export default {
   state() {
     return {
       token: "",
-      shoppingCars: []
+      shoppingCart: []
     };
   },
   mutations: {
     setToken(state, data) {
       state.token = data;
     },
-    setShoppingCars(state, data){
+    setShoppingCart(state, data){
       console.log(data);
-      state.shoppingCars.push(data);
-   //   setCookie('shoppingCars', state.shoppingCars)
+      state.shoppingCart.push(data);
+   //   setCookie('shoppingCart', state.shoppingCart)
     },
-    clrearShoppingCars(state, data){
-      state.shoppingCars = [];
-    //  setCookie('shoppingCars', [])
+    clrearShoppingCart(state, data){
+      state.shoppingCart = [];
+    //  setCookie('shoppingCart', [])
     }
   },
   getters: {
