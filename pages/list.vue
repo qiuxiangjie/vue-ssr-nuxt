@@ -46,6 +46,13 @@ export default {
     addGoods(good){
       this.$store.commit('user/setShoppingCart', good)
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
   }
 };
 </script>

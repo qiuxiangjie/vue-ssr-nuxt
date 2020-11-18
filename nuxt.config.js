@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-18 09:40:51
+ * @LastEditTime: 2020-11-18 14:33:00
  */
 
 const env = require('./env');
@@ -30,7 +30,7 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: { color: "red" },
   /*
    ** Global CSS
    */
