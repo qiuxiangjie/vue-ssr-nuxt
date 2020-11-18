@@ -22,7 +22,7 @@
 export default {
   name: "List",
   head: {
-    title: '商品列表',
+   // title: '商品列表', // 动态头部这里不能声明
     meta: [],
     link: []
   },
@@ -34,7 +34,9 @@ export default {
   created(){
     console.log(process.broswer)
   },
-  async asyncData({ $axios, error }) {
+  async asyncData({ $axios, error, app }) {
+    app.head.title = '动态头部信息'
+
     // 1、运行时间是在组件创建实例之前，this不能用
     // 2、nuxt传递上下文进来
     // 3、 仅仅存在页面组件
