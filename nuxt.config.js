@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-18 14:33:00
+ * @LastEditTime: 2020-11-18 17:11:38
  */
 
 const env = require('./env');
@@ -31,6 +31,7 @@ module.exports = {
    ** Customize the progress-bar color
    */
   loading: { color: "red" },
+  // loading: '~/components/loading.vue', // 自定义loading组件
   /*
    ** Global CSS
    */
@@ -65,6 +66,7 @@ module.exports = {
   axios: {
     proxy: true,
     // credentials: true, //跨域请求需使用凭证
+    //retry: { retries: 3 } // 失败请求拦截和次数
   },
   proxy: {
     '/api/': {
@@ -93,6 +95,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
+    analyze: true,
     extend(config, ctx) {},
   },
   telemetry: true,

@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-17 15:29:28
+ * @LastEditTime: 2020-11-18 17:09:15
  */
 
 const Koa = require('koa')
@@ -62,7 +62,7 @@ router.post('/login', ctx => {
 // 解析post数据并注册路由
 app.use(bodyparser());
 app.use(router.routes());
-const port = 8888;
+const port = 8866;
 app.listen(port, () => {
     console.log(`node 服务器启动完成！端口：${port}`)
 })

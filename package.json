@@ -5,8 +5,6 @@
   "author": "周健翔",
   "private": true,
   "scripts": {
-
-
     "dev": "cross-env NODE_ENV=development MODE=dev nodemon server/index.js --watch server",
     "dev:test": "cross-env NODE_ENV=development MODE=test nodemon server/index.js --watch server",
     "build:test": "cross-env MODE=text nuxt build",
@@ -22,6 +20,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "ant-design-vue": "^1.1.10",
+    "babel-plugin-import": "^1.13.1",
     "cookie-universal-nuxt": "^2.1.4",
     "cross-env": "^5.2.0",
     "eslint-plugin-prettier": "^3.1.4",
