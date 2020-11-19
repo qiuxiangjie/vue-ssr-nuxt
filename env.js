@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 09:50:11
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-18 17:08:27
+ * @LastEditTime: 2020-11-19 15:47:54
  */
 
 
@@ -19,6 +19,6 @@ module.exports = {
   },
   pro: {
     MODE: 'production',
-    ENV_API: 'http://localhost:8888'  // 正式服务器地址
+    ENV_API: 'http://localhost:8866'  // 正式服务器地址
   }
 }

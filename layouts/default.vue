@@ -1,13 +1,6 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @author: zhoujianxiang
- * @Date: 2020-11-16 08:45:45
- * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-18 10:46:51
--->
+
 <template>
-  <div>
+  <div class="layout-default">
     <NuxtLink to="/"> Index </NuxtLink>
      <NuxtLink to="/list"> List </NuxtLink>
       <NuxtLink to="/admin"> Admin </NuxtLink>
@@ -38,12 +31,16 @@
   
 </script>
 
-<style>
-  .cart {
-    background: url('~assets/icons/cart.jpg') ;
+<style lang="less" >
+  .layout-default {
+    .cart {
+    background: url('@{iconPath}/cart.jpg');
      width: 100px;
      height: 100px;
   }
+  }
+ 
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
