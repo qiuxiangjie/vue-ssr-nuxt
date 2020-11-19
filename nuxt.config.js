@@ -4,10 +4,11 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-19 08:57:00
+ * @LastEditTime: 2020-11-19 16:32:26
  */
 
 const env = require('./env');
+console.log('target:::',env[process.env.MODE].ENV_API)
 
 module.exports = {
   mode: "universal",
@@ -40,6 +41,10 @@ module.exports = {
     "ant-design-vue/dist/antd.css",
     "~assets/styles/index.css"
   ],
+  styleResources: {
+    less: './assets/styles/variables.less'
+    // sass: ...
+  },
   /*
    ** Plugins to load before mounting the App
    */
@@ -59,6 +64,7 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     "cookie-universal-nuxt",  // 解决服务器获取cookie问题
+    '@nuxtjs/style-resources', // 解决
   ],
   /*
    ** Axios module configuration
@@ -97,13 +103,15 @@ module.exports = {
      ** You can extend webpack config here
      */
     analyze: true,
-    extend(config, ctx) {},
+    extend(config, ctx) {
+      extractCSS: true   // css 打包成独立文件
+    },
   },
   telemetry: true,
   
   /* 修改默认端口 */
-  // server:{
-  //   host:"127.0.0.1",
-  //   port:3001
-  // }
+  server:{
+    host:"127.0.0.1",
+    port:3000
+  }
 };
