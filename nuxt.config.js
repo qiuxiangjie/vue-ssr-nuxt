@@ -4,7 +4,7 @@
  * @author: zhoujianxiang
  * @Date: 2020-11-16 08:45:45
  * @LastEditors: zhoujianxiang
- * @LastEditTime: 2020-11-18 17:11:38
+ * @LastEditTime: 2020-11-19 08:57:00
  */
 
 const env = require('./env');
@@ -26,6 +26,7 @@ module.exports = {
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [{src: 'https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.includes'}],
   },
   /*
    ** Customize the progress-bar color
